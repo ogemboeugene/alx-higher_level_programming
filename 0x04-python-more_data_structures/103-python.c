@@ -7,7 +7,6 @@
  */
 void print_python_bytes(PyObject *p)
 {
-	PyBytesObject *bytes = (PyBytesObject *)p;
 	Py_ssize_t size, i;
 	char *string;
 
@@ -28,7 +27,7 @@ void print_python_bytes(PyObject *p)
 	printf("  first %ld bytes:", size < 10 ? size : 10);
 	for (i = 0; i <= (size < 10 ? size : 10); i++)
 		printf(" %02x", (unsigned char)string[i]);
-	printf("Length: %ld\n", PyBytes_Size((PyObject *)bytes));
+
 	putchar('\n');
 }
 
