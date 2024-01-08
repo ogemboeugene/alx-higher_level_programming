@@ -17,5 +17,7 @@ def inherits_from(obj, a_class):
         for inherited_class in obj_class.__mro__:
             if inherited_class is a_class:
                 return True
+    elif obj_class is a_class:
+        return False
     
     return False
