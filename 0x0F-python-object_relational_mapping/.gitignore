@@ -1,0 +1,5 @@
+push
+*.sql
+6-model_*.py
+__pycache__/
+*.pyc
